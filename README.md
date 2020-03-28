@@ -1,22 +1,3 @@
-## styles in navbar
-```css
-font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif!important;
-
-font-style: normal!important;
-font-size: 15px!important;
-line-height: 20px!important;
-letter-spacing: .05em!important;
-text-transform: uppercase;
-
-
-header,
-nav {
-    max-width: 1032px;
-}
-
-
-max-width: 1208px;
-```
 
 ## Layout
 
@@ -35,7 +16,7 @@ max-width: 1208px;
         - .col-12 .col-md-12  .col-lg-6
         - .col-12 .col-md-12  .col-lg-6
 
-
+---
 
 - Container
     - row -> header
