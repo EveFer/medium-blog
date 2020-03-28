@@ -4,3 +4,12 @@
 body {
     font-family: $fontFamily;
 }
+
+@import "header";
+
+@import "navbar";
+
+@import "first_articles";
+
+@import "more_articles";
+
