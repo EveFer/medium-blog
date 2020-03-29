@@ -1,1 +1,51 @@
 /*Section for header styles - Noemi*/
+.padding-general {
+    padding: 8px 10px 0px 9px;
+  
+  }
+
+.text-nav {
+  font-size: 13px;
+  color: rgb(148, 148, 148);
+}
+
+@media (max-width: 768px) {
+    .noemi {
+      display: none;
+    }
+    .navbar-medium {
+        list-style: none;
+        display: inline-block;
+        flex-wrap: wrap; 
+        
+      }
+
+.padding-general {
+    padding: 8px 20px 0px 20px;
+  
+  }
+  .fa-medium {
+    font-size: 40px;
+    padding: 0px 10px 0px 5px;
+  }
+  
+  .fa-search {
+    padding: 9px 30px 0px 200px;
+    width: 25px;
+    height: 25px;
+    color: rgb(148, 148, 148);
+  }
+  
+  .fa-bell {
+    padding: 9px 0px 0px 0px ;
+    width: 25px;
+    height: 25px;
+    color: rgb(148, 148, 148);
+  }
+  .fa-user-circle {
+    width: 32px;
+    height: 32px;
+    font-size: 30px;
+   
+  }
+}
