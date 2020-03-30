@@ -1,29 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Medium</title>
-    <link rel="icon" href="./img/favicon-medium.ico" class="js-favicon"><link rel="apple-touch-icon" sizes="152x152">
+    <link rel="icon" href="./images/favicon-medium.ico" class="js-favicon"><link rel="apple-touch-icon" sizes="152x152">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    
+
     <div class="container">
-        <div class="row"> <!--Header-->
+        <!--Header-->
+        <div class="row">
             <div class="col-12">
-                <header></header>
+                <header class="d-flex justify-content-between">
+                    <div class="p-3 ">
+                        <img class="logo-medium d-none d-md-block" src="./images/logo medium-desktop.png" alt="">
+                        <i class="fab fa-medium d-md-none"></i>
+
+                    </div>
+                    <div class="mt-2 d-flex align-items-center">  
+                        
+                        <i  id="view" data-toggle="tooltip"  title="Search Medium"  class="fas fa-search mobile-distribution margin-right"> </i>
+                        <input id="ocultar" type="text" placeholder="Search Medium" class="rounded border-dark text-center border-0 btn-busqueda ">
+                        <i data-toggle="tooltip" title="Bookmarks"class="far fa-bookmark d-none d-md-block "></i>
+                        <i data-toggle="tooltip" title="Notifications" class="far fa-bell margin-right"></i>
+                        <button  type="button" class="btn rounded upgrade-header border border-dark d-none d-md-block mr-2 ">Upgrade</button>
+                        <img class="avatar-medium margin-right " src="./images/avatar.png" alt="">
+                    </div>
+
+                </header>
             </div>
         </div>
-        <div class="row"> <!--Nav-->
+
+        <!--Nav-->
+
+        <div class="row">
             <div class="col-12">
-                <nav></nav>
+                <nav class="d-flex justify-content-between" >
+                    <div>
+                        <i id="boton-prueba" class="fas fa-angle-left  button-direction"></i>
+                    </div>
+
+                    <div class="scrollmenu">
+                        <a class=" mx-3 "id="scroll-left" href="#">HOME</a>
+                        <a class=" mx-3" href="#">CORONAVIRUS BLOG</a>
+                        <a class=" mx-3" href="#">ONEZERO</a>
+                        <a class=" mx-3" href="#">ELEMENTAL</a>
+                        <a class=" mx-3" href="#">GEN</a>
+                        <a class=" mx-3" href="#">ZORA</a>
+                        <a class=" mx-3"href="#">FORGE</a>
+                        <a class=" mx-3"href="#">HUMANS PARTS</a>
+                        <a class=" mx-3"href="#">MARKER</a>
+                        <a class=" mx-3"href="#">LEVEL</a>
+                        <a class=" mx-3"href="#">HEATED</a>
+                        <a class=" mx-3"href="#">MORE</a>
+                    </div>
+                    <div>
+                        <i id="boton-prueba2" class="fas fa-angle-right button-direction"></i>
+                    </div>
+        
+
+
+                </nav>
             </div>
         </div>
-        <div class="row"> <!---->
+        <div class="row mt-4"> <!---->
             <div class="col-12 col-md-6 col-lg-4">
                 <!--article-princ-->
                 <article>
@@ -131,19 +178,30 @@
                 <!-- Card -->
                 <!-- sections - cards - infinito -->
             </div>
-            <div class="col-12 col-lg-4">
-                <!--Aside-->
-                <!--Footer-->
+            <div class="row">
+                <div class="col-12 col-lg-8">
+                    <!-- Card -->
+                    <!-- sections - cards - infinito -->
+                </div>
+                <div class="col-12 col-lg-4">
+                    <!--Aside-->
+                    <!--Footer-->
+                </div>
             </div>
+
         </div>
-    </div>
-    
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+        <script src="./js/main.js"></script>
 </body>
+
 </html>

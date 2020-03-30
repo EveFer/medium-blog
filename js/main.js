@@ -1,6 +1,29 @@
+$(document).ready(function(){
+    //Search header,mostrar y oculta input al presionar la lupa
+    $("#ocultar").hide()
+	$("#view").on( "click", function() {	 
+	    $('#ocultar').toggle();
+    });
+    
+    //flechas izquierda navbar
+    $("#boton-prueba").click(function () {
+        $(".scrollmenu").animate({
+            scrollLeft: "-=50",
+        }, 500, function () {
+            // Animation complete.
+        });
+    });
+    //flecha derecha navbar
+    $("#boton-prueba2").click(function () {
+        $(".scrollmenu").animate({
+            scrollLeft: "+=50",
+        }, 500, function () {
 
-// Tooltips Initialization
-$(function () {
+            // Animation complete.
+        });
+    });
+
+    // Tooltips Initialization and popover
     $('[data-toggle="tooltip"]').tooltip()
     $('.popover-autor').popover({
         html: true,
@@ -67,4 +90,8 @@ $(function () {
                 </div>
             </div>`
     })
-})
+});
+
+//filtar busqueda
+
+        
