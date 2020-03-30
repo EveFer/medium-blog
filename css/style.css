@@ -8,6 +8,10 @@ body {
 /*Section for header styles - Noemi*/
 /*Section for navbar styles - Noemi*/
 /*Section for first articles styles - Fer*/
+.cursor-pointer:hover {
+  cursor: pointer;
+}
+
 article .article-principal-img {
   width: 100%;
 }

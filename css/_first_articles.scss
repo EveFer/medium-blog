@@ -1,4 +1,9 @@
 /*Section for first articles styles - Fer*/
+.cursor-pointer{
+    &:hover {
+        cursor: pointer;
+    }
+}
 
 article {
     .article-principal-img {

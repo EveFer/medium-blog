@@ -10,7 +10,7 @@ $(function () {
         title: '',
         content: `
         `,
-        delay:1000,
+        delay:800,
         template: `
             <div class="popover" role="tooltip">
                 <div class="arrow">
@@ -44,7 +44,7 @@ $(function () {
         title: '',
         content: `
         `,
-        delay:1000,
+        delay:800,
         template: `
             <div class="popover" role="tooltip">
                 <div class="arrow">
