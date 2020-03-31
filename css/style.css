@@ -351,4 +351,60 @@ section article.article-card .article-card-body .article-card-data .ellipsis {
 }
 
 /* Section for more articles styles - Noe*/
+#scroll {
+  background-color: inherit;
+  width: 750px;
+  height: 1200px;
+  overflow-y: scroll;
+}
+
+#scroll::-webkit-scrollbar {
+  display: none;
+}
+
+#color-card {
+  background-color: #fafafa;
+}
+
+#button1 {
+  background-color: #21a77a;
+}
+
+#button1:hover {
+  background-color: #0c865d;
+}
+
+#button2 {
+  background-color: whitesmoke;
+}
+
+#button2:hover {
+  border: 1px black;
+}
+
+.ranking-post {
+  color: rgba(0, 0, 0, 0.15);
+  font-size: 34px;
+  font-weight: 400;
+  margin-right: 25px;
+  margin-top: -10px;
+}
+
+.decoration {
+  text-decoration: underline;
+}
+
+.text-post {
+  text-decoration: none;
+}
+
+.links-footer {
+  font-size: 16px;
+  margin-top: 50px;
+}
+
+.links-footer a {
+  color: rgba(0, 0, 0, 0.54);
+  margin-left: 15px;
+}
 /*# sourceMappingURL=style.css.map */

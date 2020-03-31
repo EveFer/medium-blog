@@ -1,1 +1,73 @@
 /* Section for more articles styles - Noe*/
+
+#scroll{
+  background-color: inherit;
+  width: 750px;
+  height: 1200px;
+ 
+  overflow-y: scroll;
+}
+
+#scroll::-webkit-scrollbar {
+  display: none;
+
+  
+}
+
+#color-card{
+background-color: #fafafa;
+
+}
+
+#button1{
+  
+  background-color: rgb(33, 167, 122)
+}
+
+#button1:hover{
+  background-color:rgb(12, 134, 93);
+}
+
+#button2{
+  
+ background-color:whitesmoke;
+ 
+  
+}
+
+#button2:hover{
+  border:1px black
+}
+
+.ranking-post{
+  color: rgba(0,0,0,.15);
+  font-size: 34px;
+  font-weight: 400;
+  margin-right: 25px;
+  margin-top: -10px;
+  
+  
+}
+
+.decoration{
+  text-decoration: underline;
+}
+
+.text-post{
+  text-decoration: none;
+}
+
+.links-footer{
+  a{
+    color:$color-black-1;
+    margin-left:15px ;
+    
+  }
+  
+
+  font-size: 16px;
+  margin-top: 50px;
+  
+
+
+}
