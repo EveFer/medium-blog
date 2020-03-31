@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <title>Medium</title>
+    <link rel="icon" href="./images/favicon-medium.ico" class="js-favicon"><link rel="apple-touch-icon" sizes="152x152">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
@@ -15,30 +15,164 @@
 <body>
 
     <div class="container">
+        <!--Header-->
         <div class="row">
-            <!--Header-->
             <div class="col-12">
-                <header></header>
+                <header class="d-flex justify-content-between">
+                    <div class="p-3 ">
+                        <img class="logo-medium d-none d-md-block" src="./images/logo medium-desktop.png" alt="">
+                        <i class="fab fa-medium d-md-none"></i>
+
+                    </div>
+                    <div class="mt-2 d-flex align-items-center">  
+                        
+                        <i  id="view" data-toggle="tooltip"  title="Search Medium"  class="fas fa-search mobile-distribution margin-right"> </i>
+                        <input id="ocultar" type="text" placeholder="Search Medium" class="rounded border-dark text-center border-0 btn-busqueda ">
+                        <i data-toggle="tooltip" title="Bookmarks"class="far fa-bookmark d-none d-md-block "></i>
+                        <i data-toggle="tooltip" title="Notifications" class="far fa-bell margin-right"></i>
+                        <button  type="button" class="btn rounded upgrade-header border border-dark d-none d-md-block mr-2 ">Upgrade</button>
+                        <img class="avatar-medium margin-right " src="./images/avatar.png" alt="">
+                    </div>
+
+                </header>
             </div>
         </div>
+
+        <!--Nav-->
+
         <div class="row">
-            <!--Nav-->
             <div class="col-12">
-                <nav></nav>
+                <nav class="d-flex justify-content-between" >
+                    <div>
+                        <i id="boton-prueba" class="fas fa-angle-left  button-direction"></i>
+                    </div>
+
+                    <div class="scrollmenu">
+                        <a class=" mx-3 "id="scroll-left" href="#">HOME</a>
+                        <a class=" mx-3" href="#">CORONAVIRUS BLOG</a>
+                        <a class=" mx-3" href="#">ONEZERO</a>
+                        <a class=" mx-3" href="#">ELEMENTAL</a>
+                        <a class=" mx-3" href="#">GEN</a>
+                        <a class=" mx-3" href="#">ZORA</a>
+                        <a class=" mx-3"href="#">FORGE</a>
+                        <a class=" mx-3"href="#">HUMANS PARTS</a>
+                        <a class=" mx-3"href="#">MARKER</a>
+                        <a class=" mx-3"href="#">LEVEL</a>
+                        <a class=" mx-3"href="#">HEATED</a>
+                        <a class=" mx-3"href="#">MORE</a>
+                    </div>
+                    <div>
+                        <i id="boton-prueba2" class="fas fa-angle-right button-direction"></i>
+                    </div>
+        
+
+
+                </nav>
             </div>
         </div>
-        <div class="row">
-            <!---->
+        <div class="row mt-4"> <!---->
             <div class="col-12 col-md-6 col-lg-4">
                 <!--article-princ-->
+                <article>
+                    <a href=""><img src="https://cdn-images-1.medium.com/fit/c/416/151/0*irQTXgaHVpHXsiZo.jpg" class=" article-principal-img" alt="..."></a>
+                    
+                    <div class="article-principal-body">
+                        <h1 class="article-principal-title cursor-pointer">Mit Develops Cheap, Open Source Ventilador for Co..</h1>
+                        <p class="article-principal-summary cursor-pointer">Lorem ipsum dolor, sit amet consectetur adipisicing elit. </p>
+                        <p class="article-principal-autor">by Ryan Whitwam</p>
+                        <div class="article-principal-data">
+                            <div class="d-flex justify-content-between">
+                                <div>
+                                    <a href=""  class="article-principal-topic popover-autor" data-toggle="popover">ExtremeTech</a> in <a href="" class="article-principal-topic popover-topic" data-toggle="popover" data-placement="top">ExtremeTech Access</a>
+                                    <p data-toggle="tooltip" data-placement="top" title="Update Mar 28">
+                                        <span class="article-principal-date-publication">March 26 . 2 min read</span>  
+                                        <span class="icon-star"><i class="fas fa-star"></i></span>
+                                    </p>
+                                </div>
+                                
+                                <a href="" class="align-self-center ellipsis"><i class="fas fa-ellipsis-h"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <!--3 cards-->
+                <section>
+                    <article class="article-card mb-4">
+                        <div class="article-card-img">
+                            <a href=""><img src="https://cdn-images-1.medium.com/fit/c/100/100/0*XT7UBDmQWpUUpWTa" class="" alt=""></a>
+                        </div>
+                        <div class="article-card-body ml-4">
+                            <h2 class="article-card-title cursor-pointer">COVID-19 Vaccine May Be Avaible in Fall</h2>
+                            
+                            <div class="article-card-data d-flex justify-content-between">
+                                <div>
+                                    <a href="" class="article-card-autor popover-autor">Jesse Smith</a>
+                                    <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span class="article-card-date-publication">March 26 . 2 min read</span>  <span class="icon-star"><i class="fas fa-star"></i></span></p>
+                                </div>
+                                <a href="" class="align-self-center ellipsis"><i class="fas fa-ellipsis-h"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article-card mt-3">
+                        <div class="article-card-img">
+                            <a href=""><img src="https://cdn-images-1.medium.com/focal/100/100/64/39/1*yOakVeg6isgmDYv2frsIfg.jpeg" class="" alt=""></a>
+                        </div>
+                        <div class="article-card-body ml-4">
+                            <h2 class="article-card-title cursor-pointer">Congres Is About to Bail Out Everyone-Except Black...</h2>
+                            
+                            <div class="article-card-data d-flex justify-content-between">
+                                <div>
+                                    <a href="" class="article-card-autor popover-autor">Mike Muse</a> in <a href="" class="article-card-autor popover-topic">LEVEL</a> 
+                                    <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span class="article-card-date-publication">March 24 . 5 min read</span>  <span class="icon-star"><i class="fas fa-star"></i></span></p>
+                                </div>
+                                <a href="" class="align-self-center ellipsis"><i class="fas fa-ellipsis-h"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="article-card mt-2">
+                        <div class="article-card-img">
+                            <a href=""><img src="https://cdn-images-1.medium.com/fit/c/100/100/1*Bx5Sb71JelPJV2BV_ja3Jg.jpeg" class="" alt=""></a>
+                        </div>
+                        <div class="article-card-body ml-4">
+                            <h2 class="article-card-title cursor-pointer">Pentecostal Snake Handle Refuses Help And Dies</h2>
+                            
+                            <div class="article-card-data d-flex justify-content-between">
+                                <div>
+                                    <a href="" class="article-card-autor popover-autor">Ramona Grigg</a> in <a href="" class="article-card-autor popover-topic">Indelible Inl</a>
+                                    <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span class="article-card-date-publication">March 20 . 6 min read</span>  <span class="icon-star"><i class="fas fa-star"></i></span></p>
+                                </div>
+                                <a href="" class="align-self-center ellipsis"><i class="fas fa-ellipsis-h"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                </section>
             </div>
             <div class="col-12 col-md-6 col-lg-4">
                 <!--article-sec-->
+                <div class="article-secundary-wrapper">
+                    <article class="article-secundary">
+                        <div>
+                            <a href=""><img src="https://cdn-images-1.medium.com/fit/c/504/222/1*KnqaYt4ngxxIVdguKe8tGA.jpeg" alt="" class="img-fluid"></a>
+                        </div>
+                        <div class="article-secundary-body">
+                            <h2 class="article-secundary-title cursor-pointer">This Is How Google Will Collapse</h2>
+                            <p class="article-secundary-summary">Reporting on Google's future with toda...</p>
+                            <div class="article-secundary-data d-flex justify-content-between">
+                                <div>
+                                    <a href="" class="article-secundary-autor popover-autor">ExtremeTech</a> in <a href="" class="article-secundary-autor popover-topic">ExtremeTech Access</a>
+                                    <p data-toggle="tooltip" data-placement="top" title="Update Mar 28" ><span class="article-secundary-date-publication">April 24,2017 . 10 min read</span>  <span class="icon-star"><i class="fas fa-star"></i></span></p>
+                                </div>
+                                <a href="" class="align-self-center ellipsis"><i class="fas fa-ellipsis-h"></i></a>
+                            </div>
+                        </div>
+                    </article>
+                    <a href="" class="article-secundary-link">SEE EDITOR'S PICKS <i class="fas fa-angle-right"></i></a>
+                </div>
             </div>
         </div>
+        <hr class="hr">
         <div class="row">
             <div  id="scroll" class="col-12 col-lg-8 order-2 order-lg-1 ">
                 <div id="color-card" class="card border-0 ">
@@ -311,18 +445,20 @@
                     </div>
                 </footer>
             </div>
-        </div>
-    </div>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
-        crossorigin="anonymous"></script>
-    <script src="./js/main.js"></script>
+        </div>
+
+
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+        <script src="./js/main.js"></script>
 </body>
 
 </html>
