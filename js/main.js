@@ -138,10 +138,13 @@ const getPostDb = () => {
         method: "GET",
         success: (response) => { 
             addPostToArray(response)
+            printPosts(arrayPost);
             console.log(response)
         }
+       
     })
 }
+
 
 const patchPostDb = (newData, idPost) => {
     $.ajax({
@@ -195,11 +198,51 @@ const getDataPost = () => {
 $('#btn-register-post').on('click', getDataPost)
 
 const addPostToArray = (postsDb) => {
+    arrayPost = []
     $.each(postsDb, (key, value) => {
-        console.log(value)
         arrayPost.push({...value,key})
 
     })
     console.log(arrayPost)
 }
 
+const printPosts = (array) => {
+    $("#wrapper-post").empty();
+    array.forEach((post) =>{
+    $("#wrapper-post").append(`
+    <div class="card mb-3 border-0 mt-5" style="max-width: 750px;">
+                        <div class="row no-gutters ">
+                            <div class="col-md-6">
+                                <div class="card-body ">
+                                    <p class="card-text m-0"><small class="text-muted ">${post.category}
+                                            theme</small>
+                                    </p>
+                                    <h4 class="card-text font-weight-bold m-0">${post.title}</h4>
+                                    <p class="card-text"><small class="text-muted">${post.content.slice(0,50)}...
+                                            world: those who do things and those who cannot do anything, whatever
+                                            happens</small>
+                                    </p>
+                                    <p class="card-text m-0"><small class="text-muted font-weight-bold  ">${post.autor}</small>
+                                    </p>
+                                    <div class="d-flex align-items-start justify-content-between">
+                                        <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span
+                                                class="article-card-date-publication card-text m-0"><small
+                                                    class="text-muted">${post.date} . ${post.time}</span></small> <span
+                                                class="icon-star"><i class="fas fa-star"></i></span>${post.votes}</p>
+                                        <div>
+                                            <i class="far fa-bookmark "></i>
+                                            <i class="fas fa-ellipsis-h"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 ">
+                                <img src="${post.image}" class="card-img img-fluid" alt="imagen1">
+                            </div>
+                        </div>
+                    </div>
+    
+    `)
+        
+    })
+}
