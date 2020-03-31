@@ -1,28 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
 </head>
+
 <body>
-    
+
     <div class="container">
-        <div class="row"> <!--Header-->
+        <div class="row">
+            <!--Header-->
             <div class="col-12">
                 <header></header>
             </div>
         </div>
-        <div class="row"> <!--Nav-->
+        <div class="row">
+            <!--Nav-->
             <div class="col-12">
                 <nav></nav>
             </div>
         </div>
-        <div class="row"> <!---->
+        <div class="row">
+            <!---->
             <div class="col-12 col-md-6 col-lg-4">
                 <!--article-princ-->
             </div>
@@ -34,23 +40,289 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 col-lg-8">
+            <div  id="scroll" class="col-12 col-lg-8 order-2 order-lg-1 ">
+                <div id="color-card" class="card border-0 ">
+                    <div class="ml-1 m-0  mt-3">
+                        <h3>Stay informed.</h3>
+                    </div>
+                    <div class="card-body m-0 p-0 ">
+                        <h5 class="card-title "></h5>
+                        <p class="card-text text-justify m">Medium is providing free access to curated stories 
+                            covering the pandemic. To help you stay informed, our editors have 
+                            created the Medium Coronavirus Blog, with links to stories on Medium 
+                            and around the web. For official U.S. updates on the pandemic, 
+                            visit cdc.gov.
+                        </p>
+                        <a href="#"  class="btn btn-success " id="button1">Visit coronavirus.medium.com</a>
+                        <a href="#"  class="btn btn-light b  " id="button2">Visit cdc.gov</a>
+                        <button type="button" class="btn btn-success rounded-circle" data-toggle="modal" data-target="#modalFormPosts"><i class="fas fa-plus"></i></button>
+                    </div>
+                </div>
+                <div class="card mb-3 border-0 mt-5" style="max-width: 750px;">
+                    <div  class="row no-gutters ">
+                        <div  class="col-md-6">
+                            <div class="card-body ">
+                                <p class="card-text m-0"><small class="text-muted ">PRODUCTIVITY Popular theme</small>
+                                </p>
+                                <h4 class="card-text font-weight-bold m-0">8 things you can learn in 10 minutes that double your productivity</h4>
+                                <p class="card-text"><small class="text-muted">There are two types of people in this world: those who do things and those who cannot do anything, whatever happens</small>
+                                </p>
+                                <p class="card-text m-0"><small class="text-muted font-weight-bold  ">Thomas Oppong en Kaizen Habits</small>
+                                </p>
+                                <div class="d-flex align-items-start justify-content-between">
+                                    <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span class="article-card-date-publication card-text m-0"><small class="text-muted">March 26 . 2 min read</span></small> <span class="icon-star"><i class="fas fa-star"></i></span></p>
+                                    <div>
+                                        <i class="far fa-bookmark "></i>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <img src="/img/imagen1.jpeg" class="card-img" alt="imagen1">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 border-0" style="max-width: 750px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <p class="card-text m-0"><small class="text-muted ">BASED ON YOUR READING HISTORY</small>
+                                </p>
+                                <h4 class="card-text font-weight-bold m-0"> How I completaly transformed my body in one year</h4>
+                                <p class="card-text"><small class="text-muted">And if i can do it, you definitely can.</small>
+                                </p>
+                                <p class="card-text m-0"><small class="text-muted font-weight-bold  ">Matthew Boutte in Better Humans</small>
+                                </p>
+                                <div class="d-flex align-items-start justify-content-between">
+                                  <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span class="article-card-date-publication card-text m-0"><small class="text-muted">March 26 . 2 min read</span></small> <span class="icon-star"><i class="fas fa-star"></i></span></p>
+                                    <div>
+                                        <i class="far fa-bookmark "></i>
+                                        <i class="fas fa-ellipsis-h"></i>
+                                    </div>
+                                </div>  
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <img src="/img/imagen2.jpeg" class="card-img" alt="imagen1">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 border-0" style="max-width: 750px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <img src="/img/imagen3.jpeg" class="card-img" alt="imagen1">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 border-0" style="max-width: 750px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <img src="/img/imagen4.jpeg" class="card-img" alt="imagen1">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 border-0" style="max-width: 750px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <img src="/img/imagen5.jpeg" class="card-img" alt="imagen1">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 border-0 " style="max-width: 750px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <img src="/img/imagen6.jpeg" class="card-img" alt="imagen1">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 border-0" style="max-width: 750px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <img src="/img/imagen7.jpeg" class="card-img" alt="imagen1">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 border-0" style="max-width: 750pxpx;">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <img src="/img/imagen8.jpeg" class="card-img" alt="imagen1">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 border-0" style="max-width: 750px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <img src="/img/imagen9.jpeg" class="card-img" alt="imagen1">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 border-0 " style="max-width: 750px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <img src="/img/imagen10.jpeg" class="card-img" alt="imagen1">
+                        </div>
+                    </div>
+                </div>
+                <div class="card mb-3 border-0" style="max-width: 750px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural
+                                    lead-in to additional content. This content is a little bit longer.</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 ">
+                            <img src="/img/imagen11.jpeg" class="card-img" alt="imagen1">
+                        </div>
+                    </div>
+                </div>
+            </div>
                 <!-- Card -->
                 <!-- sections - cards - infinito -->
-            </div>
-            <div class="col-12 col-lg-4">
+            <div class="col-12 col-lg-4 order-1 order-lg-2 mb-4 mt-3">
+                <ul class="list-group list-group-flush">
+                    <h3 class="border-bottom  p-3">Popular on medium</h3>
+                    <li class="list-group-item d-flex align-items-start border-0">
+                        <span class="ranking-post align-self-start mt-3">01</span>
+                        <div>
+                            <p class="font-weight-bold mt-3">Tom Colicchio Spent 19 Years Building a Restaurant Empire. Coronavirus Gutted It in a Month.</p>
+                            <p class="card-text m-0"><small class="text-muted font-weight-bold  ">Aaron Gell in Marker</small>
+                            <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span class="article-card-date-publication card-text m-0"><small class="text-muted">March 26 . 2 min read</span></small> <span class="icon-star"><i class="fas fa-star"></i></span></p>
+                        </div>
+                       
+                        
+                   
+                    <li class="list-group-item d-flex align-items-start mt-2 border-0">
+                        <span class="ranking-post align-self-start mt-2">02</span>
+                        <div>
+                            <p class="font-weight-bold mt-3">People Over 60 Can Protect Themselves Right Now</p>
+                            <p class="card-text m-0"><small class="text-muted font-weight-bold  ">Katie Couric in Wake-Up-Call</small>
+                            <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span class="article-card-date-publication card-text m-0"><small class="text-muted">March 26 . 2 min read</span></small> <span class="icon-star"><i class="fas fa-star"></i></span></p>
+                        </div>
+                    </li>
+                    
+                    <li class="list-group-item d-flex align-items-start mt-2 border-0">
+                        <span class="ranking-post align-self-start mt-2">03</span>
+                        <div >
+                            <div>
+                                <p class="font-weight-bold mt-3">Social distancing is dead serious,hold the line</p>
+                                <p class="card-text m-0"><small class="text-muted font-weight-bold  ">Jonathan Smith in Elemental</small>
+                                <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span class="article-card-date-publication card-text m-0"><small class="text-muted">March 26 . 2 min read</span></small> <span class="icon-star"><i class="fas fa-star"></i></span></p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="list-group-item d-flex align-items-start mt-2 border-0">
+                        <span class="ranking-post align-self-start mt-2">04</span>
+                        <div>
+                            <p class="font-weight-bold mt-3 ">This Is How Your Immune System Reacts to Coronavirus</p>
+                            <p class="card-text m-0"><small class="text-muted font-weight-bold  ">Dana G Smith in Elemental</small>
+                            <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span class="article-card-date-publication card-text m-0"><small class="text-muted">March 26 . 2 min read</span></small> <span class="icon-star"><i class="fas fa-star"></i></span></p>
+                        </div>
+                    </li>
+                  </ul>
                 <!--Aside-->
                 <!--Footer-->
+                <footer class="d-none d-lg-block">
+                    <div class="links-footer p-2 border-top" >
+                        <a href="#">Help</a>
+                        <a href="#">Status</a>
+                        <a href="#">Writers</a>
+                        <a href="#">Blog</a>
+                        <a href="#">Careers</a>
+                        <a href="#">Privacy</a>
+                        <a href="#">Terms</a>
+                        <a href="#">About</a>
+                    </div>
+                </footer>
             </div>
         </div>
     </div>
-    
-    <script
-    src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-    crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
 </body>
+
 </html>
