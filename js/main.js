@@ -13,6 +13,7 @@ $(document).ready(function () {
             // Animation complete.
         });
     });
+
     //flecha derecha navbar
     $("#boton-prueba2").click(function () {
         $(".scrollmenu").animate({
@@ -169,6 +170,52 @@ $("#ocultar").on("keyup",(event)=>{
     filterArray(arrayPost,keyWord)
 })
 
+var postObject =  {
+    category: 'Medicina',
+    title: 'title',
+    autor: 'autor',
+    content: 'consten',
+    date: '2019-04-31',
+    time: '2 min',
+    image: '',
+    tagIn: 'ncs'
+}
+
+const createdPostDb = (postObject) => {
+    $.ajax({
+        
+        url:"https://javascript-ajax-d0ce6.firebaseio.com/superTeam/posts/.json",
+        method:"POST",
+        data:JSON.stringify(postObject),
+        success:(response) => {
+            console.log(response)
+            console.log("registro exitoso")
+        }
+    })
+}
+
+const getPostDb = () => {
+    $.ajax({
+        url:"https://javascript-ajax-d0ce6.firebaseio.com/superTeam/posts/.json",
+        method:"GET",
+        success:(response) => {
+            console.log(response)
+        }
+    })
+}
+
+const patchPostDb = (newData,idPost) => {
+    $.ajax({
+        url:`https://javascript-ajax-d0ce6.firebaseio.com/superTeam/posts/${idPost}.json`,
+        method:"PATCH",
+        data:JSON.stringify(newData),
+        success:(response) => {
+            console.log(response)
+        }
+
+
+    })
+}
 
 
 
