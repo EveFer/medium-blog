@@ -94,69 +94,7 @@ $(document).ready(function () {
 });
 
 //filtar busqueda
-var arrayPost = [
-    {
-        category: 'Medicina',
-        title: 'title',
-        autor: 'autor',
-        content: 'consten',
-        date: '2019-04-31',
-        time: '2 min',
-        image: '',
-        tagIn: 'ncs'
-    },
-    {
-        category: 'salud',
-        title: '',
-        autor: '',
-        content: '',
-        date: '',
-        time: '',
-        image: '',
-        tagIn: ''
-    },
-    {
-        category: 'Tecnologia',
-        title: '',
-        autor: '',
-        content: '',
-        date: '',
-        time: '',
-        image: '',
-        tagIn: ''
-    },
-    {
-        category: 'Medicina',
-        title: '',
-        autor: '',
-        content: '',
-        date: '',
-        time: '',
-        image: '',
-        tagIn: ''
-    },
-    {
-        category: 'Medicina',
-        title: '',
-        autor: '',
-        content: '',
-        date: '',
-        time: '',
-        image: '',
-        tagIn: ''
-    },
-    {
-        category: 'Música',
-        title: '',
-        autor: '',
-        content: '',
-        date: '',
-        time: '',
-        image: '',
-        tagIn: ''
-    }
-]
-
+var arrayPost = []
 var resultFilter = []
 const filterArray = (array, word) => {
     resultFilter = array.filter((item) => {
@@ -165,12 +103,12 @@ const filterArray = (array, word) => {
     console.log(resultFilter)
 }
 
-$("#ocultar").on("keyup",(event)=>{
-    let keyWord=$(event.target).val()
-    filterArray(arrayPost,keyWord)
+$("#ocultar").on("keyup", (event) => {
+    let keyWord = $(event.target).val()
+    filterArray(arrayPost, keyWord)
 })
 
-var postObject =  {
+var postObject = {
     category: 'Medicina',
     title: 'title',
     autor: 'autor',
@@ -183,11 +121,11 @@ var postObject =  {
 
 const createdPostDb = (postObject) => {
     $.ajax({
-        
-        url:"https://javascript-ajax-d0ce6.firebaseio.com/superTeam/posts/.json",
-        method:"POST",
-        data:JSON.stringify(postObject),
-        success:(response) => {
+
+        url: "https://javascript-ajax-d0ce6.firebaseio.com/superTeam/posts/.json",
+        method: "POST",
+        data: JSON.stringify(postObject),
+        success: (response) => {
             console.log(response)
             console.log("registro exitoso")
         }
@@ -196,27 +134,27 @@ const createdPostDb = (postObject) => {
 
 const getPostDb = () => {
     $.ajax({
-        url:"https://javascript-ajax-d0ce6.firebaseio.com/superTeam/posts/.json",
-        method:"GET",
-        success:(response) => {
+        url: "https://javascript-ajax-d0ce6.firebaseio.com/superTeam/posts/.json",
+        method: "GET",
+        success: (response) => { 
+            addPostToArray(response)
             console.log(response)
         }
     })
 }
 
-const patchPostDb = (newData,idPost) => {
+const patchPostDb = (newData, idPost) => {
     $.ajax({
-        url:`https://javascript-ajax-d0ce6.firebaseio.com/superTeam/posts/${idPost}.json`,
-        method:"PATCH",
-        data:JSON.stringify(newData),
-        success:(response) => {
+        url: `https://javascript-ajax-d0ce6.firebaseio.com/superTeam/posts/${idPost}.json`,
+        method: "PATCH",
+        data: JSON.stringify(newData),
+        success: (response) => {
             console.log(response)
         }
 
 
     })
 }
-
 
 
 const clearForm = () => {
@@ -242,17 +180,26 @@ const getDataPost = () => {
     let tagIn = $('#post-tag').val();
     let votes = 0;
 
-    
-    if(title !== '' && category !== '' && content !== '' && autor !== '' &&  date !== '' && time !== '' && image !== '' && tagIn !== '') {
+
+    if (title !== '' && category !== '' && content !== '' && autor !== '' && date !== '' && time !== '' && image !== '' && tagIn !== '') {
         // Si los inputs tienen datos se creara el objeto
-        let newPostObject = {title, category,content, autor, date, time, image, tagIn, votes}
+        let newPostObject = { title, category, content, autor, date, time, image, tagIn, votes }
         createdPostDb(newPostObject);
         clearForm()
-    }else {
+    } else {
         // si no hay ningun dato en los inputs
         alert('Todos los campos son obligatorios >.<')
     }
 }
 
 $('#btn-register-post').on('click', getDataPost)
+
+const addPostToArray = (postsDb) => {
+    $.each(postsDb, (key, value) => {
+        console.log(value)
+        arrayPost.push({...value,key})
+
+    })
+    console.log(arrayPost)
+}
 
