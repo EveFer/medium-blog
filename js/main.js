@@ -1,10 +1,10 @@
-$(document).ready(function(){
+$(document).ready(function () {
     //Search header,mostrar y oculta input al presionar la lupa
     $("#ocultar").hide()
-	$("#view").on( "click", function() {	 
-	    $('#ocultar').toggle();
+    $("#view").on("click", function () {
+        $('#ocultar').toggle();
     });
-    
+
     //flechas izquierda navbar
     $("#boton-prueba").click(function () {
         $(".scrollmenu").animate({
@@ -33,7 +33,7 @@ $(document).ready(function(){
         title: '',
         content: `
         `,
-        delay:800,
+        delay: 800,
         template: `
             <div class="popover" role="tooltip">
                 <div class="arrow">
@@ -56,7 +56,7 @@ $(document).ready(function(){
                         <button type="button" class="btn btn-outline-success">Follow</button>
                     </div>
                 </div>
-            </div>`     
+            </div>`
     })
 
     $('.popover-topic').popover({
@@ -67,7 +67,7 @@ $(document).ready(function(){
         title: '',
         content: `
         `,
-        delay:800,
+        delay: 800,
         template: `
             <div class="popover" role="tooltip">
                 <div class="arrow">
@@ -93,5 +93,83 @@ $(document).ready(function(){
 });
 
 //filtar busqueda
+var arrayPost = [
+    {
+        category: 'Medicina',
+        title: 'title',
+        autor: 'autor',
+        content: 'consten',
+        date: '2019-04-31',
+        time: '2 min',
+        image: '',
+        tagIn: 'ncs'
+    },
+    {
+        category: 'salud',
+        title: '',
+        autor: '',
+        content: '',
+        date: '',
+        time: '',
+        image: '',
+        tagIn: ''
+    },
+    {
+        category: 'Tecnologia',
+        title: '',
+        autor: '',
+        content: '',
+        date: '',
+        time: '',
+        image: '',
+        tagIn: ''
+    },
+    {
+        category: 'Medicina',
+        title: '',
+        autor: '',
+        content: '',
+        date: '',
+        time: '',
+        image: '',
+        tagIn: ''
+    },
+    {
+        category: 'Medicina',
+        title: '',
+        autor: '',
+        content: '',
+        date: '',
+        time: '',
+        image: '',
+        tagIn: ''
+    },
+    {
+        category: 'Música',
+        title: '',
+        autor: '',
+        content: '',
+        date: '',
+        time: '',
+        image: '',
+        tagIn: ''
+    }
+]
 
-        
+var resultFilter = []
+const filterArray = (array, word) => {
+    resultFilter = array.filter((item) => {
+        return item.category.toLowerCase().includes(word.toLowerCase())
+    })
+    console.log(resultFilter)
+}
+
+$("#ocultar").on("keyup",(event)=>{
+    let keyWord=$(event.target).val()
+    filterArray(arrayPost,keyWord)
+})
+
+
+
+
+
