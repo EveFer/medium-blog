@@ -219,4 +219,40 @@ const patchPostDb = (newData,idPost) => {
 
 
 
+const clearForm = () => {
+    $('#post-title').val("");
+    $('#post-category').val("");
+    $('#post-complete-content').val("");
+    $('#post-autor').val("");
+    $('#post-publication-date').val("");
+    $('#post-minutes-reading').val("");
+    $('#post-image').val("");
+    $('#post-tag').val("");
+}
+
+const getDataPost = () => {
+    console.log('Estas registrando');
+    let title = $('#post-title').val();
+    let category = $('#post-category').val();
+    let content = $('#post-complete-content').val();
+    let autor = $('#post-autor').val();
+    let date = $('#post-publication-date').val();
+    let time = $('#post-minutes-reading').val();
+    let image = $('#post-image').val();
+    let tagIn = $('#post-tag').val();
+    let votes = 0;
+
+    
+    if(title !== '' && category !== '' && content !== '' && autor !== '' &&  date !== '' && time !== '' && image !== '' && tagIn !== '') {
+        // Si los inputs tienen datos se creara el objeto
+        let newPostObject = {title, category,content, autor, date, time, image, tagIn, votes}
+        createdPostDb(newPostObject);
+        clearForm()
+    }else {
+        // si no hay ningun dato en los inputs
+        alert('Todos los campos son obligatorios >.<')
+    }
+}
+
+$('#btn-register-post').on('click', getDataPost)
 
