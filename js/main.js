@@ -96,11 +96,14 @@ $(document).ready(function () {
 //filtar busqueda
 var arrayPost = []
 var resultFilter = []
+var postPopular = []
+
 const filterArray = (array, word) => {
     resultFilter = array.filter((item) => {
         return item.category.toLowerCase().includes(word.toLowerCase())
     })
     console.log(resultFilter)
+    printPosts(resultFilter)
 }
 
 $("#ocultar").on("keyup", (event) => {
@@ -145,6 +148,20 @@ const getPostDb = () => {
     })
 }
 
+const getOnePostDb = (idPost) => {
+    var result =  $.ajax({
+        url: `https://javascript-ajax-d0ce6.firebaseio.com/superTeam/posts/${idPost}.json`,
+        method: "GET",
+        success: (response) => { 
+            // console.log(response)
+        }
+    })
+
+    console.log(result)
+    result = result.responseJSON
+    return result;
+}
+
 
 const patchPostDb = (newData, idPost) => {
     $.ajax({
@@ -153,6 +170,7 @@ const patchPostDb = (newData, idPost) => {
         data: JSON.stringify(newData),
         success: (response) => {
             console.log(response)
+            getPostDb()
         }
 
 
@@ -203,27 +221,55 @@ const addPostToArray = (postsDb) => {
         arrayPost.push({...value,key})
 
     })
-    console.log(arrayPost)
+    // console.log(arrayPost)
+    addMostPopular(arrayPost)
+}
+
+const printPostPopular = (array) => {
+    $("#wrapper-post-popular").empty();
+    array.forEach((post, index) => {
+        $("#wrapper-post-popular").append(`
+            <li class="list-group-item d-flex align-items-start border-0">
+                <span class="ranking-post align-self-start mt-3">${index+1}</span>
+                <div>
+                    <p class="font-weight-bold mt-3">${post.title}</p>
+                    <p class="card-text m-0"><small class="text-muted font-weight-bold  ">${post.autor} in
+                            ${post.tagIn}</small>
+                        <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span
+                                class="article-card-date-publication card-text m-0"><small
+                                    class="text-muted">March 26 . ${post.time} read</span></small> <span
+                                class="icon-star"><i class="fas fa-star"></i></span></p>
+                </div>
+            </li>
+        `)
+    })
+}
+
+const addMostPopular = (arrayPost) => {
+    postPopular = arrayPost.filter((post)=> {
+        return post.votes > 3
+    })
+    console.log('popular')
+    console.log(postPopular)
+    printPostPopular(postPopular);
 }
 
 const printPosts = (array) => {
     $("#wrapper-post").empty();
     array.forEach((post) =>{
     $("#wrapper-post").append(`
-    <div class="card mb-3 border-0 mt-5" style="max-width: 750px;">
+    <div class="card mb-3 border-0 mt-5 post-show" data-id-post=${post.key}>
                         <div class="row no-gutters ">
                             <div class="col-md-6">
-                                <div class="card-body ">
+                                <div class="card-body pt-0 pl-0">
                                     <p class="card-text m-0"><small class="text-muted ">${post.category}
                                             theme</small>
                                     </p>
                                     <h4 class="card-text font-weight-bold m-0">${post.title}</h4>
-                                    <p class="card-text"><small class="text-muted">${post.content.slice(0,50)}...
-                                            world: those who do things and those who cannot do anything, whatever
-                                            happens</small>
-                                    </p>
-                                    <p class="card-text m-0"><small class="text-muted font-weight-bold  ">${post.autor}</small>
-                                    </p>
+                                    <p class="card-text"><small class="text-muted">${post.content.slice(0,100)}...</small>
+                                    </p>                                    
+                                    <a href="" class="article-card-autor popover-autor text-muted "><small>${post.autor}</small> </a> <small>in</small> <a href=""class="article-card-autor text-muted  popover-topic"><small>${post.tagIn}</small></a>
+                                    </a>
                                     <div class="d-flex align-items-start justify-content-between">
                                         <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span
                                                 class="article-card-date-publication card-text m-0"><small
@@ -245,4 +291,27 @@ const printPosts = (array) => {
     `)
         
     })
+
+    $('.fa-star').on('click', patchPost)
 }
+
+
+
+
+
+
+getPostDb()
+
+const patchPost = (event) => {
+    let idPost = $(event.target).closest('.post-show').data('id-post');
+    let postCurrent = arrayPost.filter((item) => {
+        return item.key === idPost
+    })
+    console.log(postCurrent)
+    console.log(idPost);
+    let votes = postCurrent[0].votes + 1;
+    console.log(votes)
+    let newData = {votes}
+    patchPostDb(newData, idPost)
+}
+

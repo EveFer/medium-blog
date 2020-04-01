@@ -83,6 +83,12 @@
         </div>
     </div>
 
+
+
+
+
+
+
     <div class="container">
         <!--Header-->
         <div class="row">
@@ -112,7 +118,7 @@
 
         <!--Nav-->
 
-        <div class="row">
+        <div class="row sticky-top">
             <div class="col-12">
                 <nav class="d-flex justify-content-between">
                     <div>
@@ -274,7 +280,7 @@
         <hr class="hr">
         <div class="row">
             <div id="scroll" class="col-12 col-lg-8 order-2 order-lg-1 ">
-                <div id="color-card" class="card border-0 ">
+                <div id="color-card" class="card border-0 p-5">
                     <div class="ml-1 m-0  mt-3">
                         <h3>Stay informed.</h3>
                     </div>
@@ -290,6 +296,9 @@
                         <a href="#" class="btn btn-light b  " id="button2">Visit cdc.gov</a>
                         <button type="button" class="btn btn-success rounded-circle" data-toggle="modal"
                             data-target="#modalFormPosts"><i class="fas fa-plus"></i></button>
+                        
+                        <button type="button" class="btn btn-success rounded-circle" data-toggle="modal"
+                            data-target="#modalShowPosts"><i class="fas fa-plus"></i></button>
                     </div>
                 </div>
                 <div id="wrapper-post">
@@ -509,60 +518,62 @@
             <div class="col-12 col-lg-4 order-1 order-lg-2 mb-4 mt-3">
                 <ul class="list-group list-group-flush">
                     <h3 class="border-bottom  p-3">Popular on medium</h3>
-                    <li class="list-group-item d-flex align-items-start border-0">
-                        <span class="ranking-post align-self-start mt-3">01</span>
-                        <div>
-                            <p class="font-weight-bold mt-3">Tom Colicchio Spent 19 Years Building a Restaurant Empire.
-                                Coronavirus Gutted It in a Month.</p>
-                            <p class="card-text m-0"><small class="text-muted font-weight-bold  ">Aaron Gell in
-                                    Marker</small>
-                                <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span
-                                        class="article-card-date-publication card-text m-0"><small
-                                            class="text-muted">March 26 . 2 min read</span></small> <span
-                                        class="icon-star"><i class="fas fa-star"></i></span></p>
-                        </div>
-
-
-
-                    <li class="list-group-item d-flex align-items-start mt-2 border-0">
-                        <span class="ranking-post align-self-start mt-2">02</span>
-                        <div>
-                            <p class="font-weight-bold mt-3">People Over 60 Can Protect Themselves Right Now</p>
-                            <p class="card-text m-0"><small class="text-muted font-weight-bold  ">Katie Couric in
-                                    Wake-Up-Call</small>
-                                <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span
-                                        class="article-card-date-publication card-text m-0"><small
-                                            class="text-muted">March 26 . 2 min read</span></small> <span
-                                        class="icon-star"><i class="fas fa-star"></i></span></p>
-                        </div>
-                    </li>
-
-                    <li class="list-group-item d-flex align-items-start mt-2 border-0">
-                        <span class="ranking-post align-self-start mt-2">03</span>
-                        <div>
+                    <div id="wrapper-post-popular">
+                        <li class="list-group-item d-flex align-items-start border-0">
+                            <span class="ranking-post align-self-start mt-3">01</span>
                             <div>
-                                <p class="font-weight-bold mt-3">Social distancing is dead serious,hold the line</p>
-                                <p class="card-text m-0"><small class="text-muted font-weight-bold  ">Jonathan Smith in
+                                <p class="font-weight-bold mt-3">Tom Colicchio Spent 19 Years Building a Restaurant Empire.
+                                    Coronavirus Gutted It in a Month.</p>
+                                <p class="card-text m-0"><small class="text-muted font-weight-bold  ">Aaron Gell in
+                                        Marker</small>
+                                    <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span
+                                            class="article-card-date-publication card-text m-0"><small
+                                                class="text-muted">March 26 . 2 min read</span></small> <span
+                                            class="icon-star"><i class="fas fa-star"></i></span></p>
+                            </div>
+                        </li>
+
+
+                        <li class="list-group-item d-flex align-items-start mt-2 border-0">
+                            <span class="ranking-post align-self-start mt-2">02</span>
+                            <div>
+                                <p class="font-weight-bold mt-3">People Over 60 Can Protect Themselves Right Now</p>
+                                <p class="card-text m-0"><small class="text-muted font-weight-bold  ">Katie Couric in
+                                        Wake-Up-Call</small>
+                                    <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span
+                                            class="article-card-date-publication card-text m-0"><small
+                                                class="text-muted">March 26 . 2 min read</span></small> <span
+                                            class="icon-star"><i class="fas fa-star"></i></span></p>
+                            </div>
+                        </li>
+
+                        <li class="list-group-item d-flex align-items-start mt-2 border-0">
+                            <span class="ranking-post align-self-start mt-2">03</span>
+                            <div>
+                                <div>
+                                    <p class="font-weight-bold mt-3">Social distancing is dead serious,hold the line</p>
+                                    <p class="card-text m-0"><small class="text-muted font-weight-bold  ">Jonathan Smith in
+                                            Elemental</small>
+                                        <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span
+                                                class="article-card-date-publication card-text m-0"><small
+                                                    class="text-muted">March 26 . 2 min read</span></small> <span
+                                                class="icon-star"><i class="fas fa-star"></i></span></p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-start mt-2 border-0">
+                            <span class="ranking-post align-self-start mt-2">04</span>
+                            <div>
+                                <p class="font-weight-bold mt-3 ">This Is How Your Immune System Reacts to Coronavirus</p>
+                                <p class="card-text m-0"><small class="text-muted font-weight-bold  ">Dana G Smith in
                                         Elemental</small>
                                     <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span
                                             class="article-card-date-publication card-text m-0"><small
                                                 class="text-muted">March 26 . 2 min read</span></small> <span
                                             class="icon-star"><i class="fas fa-star"></i></span></p>
                             </div>
-                        </div>
-                    </li>
-                    <li class="list-group-item d-flex align-items-start mt-2 border-0">
-                        <span class="ranking-post align-self-start mt-2">04</span>
-                        <div>
-                            <p class="font-weight-bold mt-3 ">This Is How Your Immune System Reacts to Coronavirus</p>
-                            <p class="card-text m-0"><small class="text-muted font-weight-bold  ">Dana G Smith in
-                                    Elemental</small>
-                                <p data-toggle="tooltip" data-placement="top" title="Update Mar 28"><span
-                                        class="article-card-date-publication card-text m-0"><small
-                                            class="text-muted">March 26 . 2 min read</span></small> <span
-                                        class="icon-star"><i class="fas fa-star"></i></span></p>
-                        </div>
-                    </li>
+                        </li>
+                    </div>
                 </ul>
                 <!--Aside-->
                 <!--Footer-->
