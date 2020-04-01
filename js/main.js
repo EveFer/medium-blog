@@ -131,6 +131,7 @@ const createdPostDb = (postObject) => {
         success: (response) => {
             console.log(response)
             console.log("registro exitoso")
+            getPostDb()
         }
     })
 }
@@ -147,6 +148,7 @@ const getPostDb = () => {
        
     })
 }
+getPostDb()
 
 const getOnePostDb = (idPost) => {
     var result =  $.ajax({
@@ -300,7 +302,7 @@ const printPosts = (array) => {
 
 
 
-getPostDb()
+
 
 const patchPost = (event) => {
     let idPost = $(event.target).closest('.post-show').data('id-post');
@@ -314,4 +316,6 @@ const patchPost = (event) => {
     let newData = {votes}
     patchPostDb(newData, idPost)
 }
+
+
 
