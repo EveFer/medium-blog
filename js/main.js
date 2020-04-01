@@ -285,7 +285,7 @@ const printPosts = (array) => {
                                 </div>
                             </div>
                             <div class="col-md-6 ">
-                                <img src="${post.image}" class="card-img img-fluid" alt="imagen1">
+                                <img src="${post.image}" class="card-img" height="260" width="100" alt="imagen1">
                             </div>
                         </div>
                     </div>
